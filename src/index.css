@@ -1,0 +1,106 @@
+:root {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #E1E1E6;
+  background-color: #121214;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #8257E5;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #996DFF;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #E1E1E6;
+}
+
+.container {
+  display: flex; /* Utilizza flexbox per il layout */
+  flex-direction: column; /* Imposta la direzione dei flex items in verticale */
+  justify-content: center; /* Centra i contenuti verticalmente */
+  align-items: center; /* Centra i contenuti orizzontalmente */
+  height: 100vh; /* Imposta l'altezza del container all'altezza della viewport */
+  width: 70vw; /* Imposta la larghezza del container alla larghezza della viewport */
+  padding: 20px; /* Aggiunge un po' di spazio intorno ai contenuti */
+  box-sizing: border-box; /* Include il padding e il bordo nel calcolo della larghezza e dell'altezza */
+}
+
+.input-description {
+  width: 400px;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.input-name,
+.input-surname,
+.input-casella,
+.button { 
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #323238;
+  background-color: #202024;
+  color: #E1E1E6;
+  margin: 10px 0;
+}
+
+.button,
+button {
+  background-color: #8257E5;
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover,
+button:hover {
+  background-color: #996DFF;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #323238;
+    background-color: #FAFAFA;
+  }
+
+  a:hover {
+    color: #8257E5;
+  }
+
+  button {
+    background-color: #E1E1E6;
+  }
+}
