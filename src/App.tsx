@@ -49,7 +49,8 @@ function App() {
         onChange={(e) => setName(e.target.value)}
       />
       {/* Casella di input per la descrizione */}
-      <textarea
+      <input
+        type="text"
         placeholder="Write here your surname"
         className="input-surname"
         value={surname}
