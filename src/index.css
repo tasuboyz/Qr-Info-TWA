@@ -46,12 +46,9 @@ h1 {
   box-sizing: border-box; /* Include il padding e il bordo nel calcolo della larghezza e dell'altezza */
 }
 
-.input-description {
-  width: 400px;
-  height: 100px;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-size: 16px;
+.container-casella{
+  display: flex; /* Utilizza flexbox per il layout */
+  flex-direction: row; /* Imposta la direzione dei flex items in verticale */
 }
 
 .input-name,

@@ -37,32 +37,13 @@ function App() {
     setCaselle(newCaselle);
   };
 
+  // const vaiANuovaPagina = () => {
+  //   window.location.href = '/nuovaPagina'; // Sostituisci '/nuovaPagina' con il percorso della tua nuova pagina
+  // };
+
   return (
     <>
-      <div className="container">
-      {/* Casella di input per il titolo */}
-      <input
-        type="text"
-        placeholder="write here your name"
-        className="input-name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      {/* Casella di input per la descrizione */}
-      <input
-        type="text"
-        placeholder="Write here your surname"
-        className="input-surname"
-        value={surname}
-        onChange={(e) => setSurname(e.target.value)}
-      />
-      {/* Aggiungi o rimuovi caselle */}
-      <fieldset id="bottoniContainer">
-        <legend>Add or remove boxes:</legend>
-        <button type="button" onClick={aggiungiCasella}>+</button>
-        <button type="button" onClick={rimuoviCasella}>-</button>
-      </fieldset>     
-
+      <div className="container-caselle">
       {caselle.map((casella, index) => (
         <div key={index} className="casella">
           <input
@@ -88,8 +69,37 @@ function App() {
           />
         </div>
       ))}
+      {/* Casella di input per il titolo */}
+      <input
+        type="text"
+        placeholder="write here your name"
+        className="input-name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      {/* Casella di input per la descrizione */}
+      <input
+        type="text"
+        placeholder="Write here your surname"
+        className="input-surname"
+        value={surname}
+        onChange={(e) => setSurname(e.target.value)}
+      />
+      {/* Aggiungi o rimuovi caselle */}
+      <fieldset id="bottoniContainer">
+        <legend>Add or remove boxes:</legend>
+        <button type="button" onClick={aggiungiCasella}>+</button>
+        <button type="button" onClick={rimuoviCasella}>-</button>
+      </fieldset>     
+     
       {/* Bottone di invio post */}
       <button className="button" onClick={inviaMessaggio}>Confirm</button>
+      {/* <div className="container"> */}
+        {/* ... */}
+        {/* Bottone per navigare ad una nuova pagina */}
+        {/* <button className="button" onClick={vaiANuovaPagina}>Vai a Nuova Pagina</button> */}
+        {/* ... */}
+      {/* </div> */}
     </div>
     </>
   )
